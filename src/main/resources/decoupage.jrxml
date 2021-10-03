@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_3" pageWidth="842" pageHeight="1191" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47c95296-67f6-4b05-bfc4-606919738cb8">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyAdapter"/>
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+    <style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="Dataset1" uuid="e4f22735-e162-4fa9-9a07-f99c97004987">
+        <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+        <property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyAdapter"/>
+        <queryString language="SQL">
+            <![CDATA[select count(decoupage_analytique.id) as c,
+decoupage_analytique.niveau from decoupage_analytique
+group by decoupage_analytique.niveau]]>
+        </queryString>
+        <field name="niveau" class="java.lang.Integer">
+
+        </field>
+        <field name="c" class="java.lang.Long">
+
+        </field>
+    </subDataset>
+    <subDataset name="Dataset2" uuid="7195d12f-33e1-47fd-8953-e63ad4569ac9">
+
+        <queryString language="SQL">
+            <![CDATA[SELECT decoupage_analytique.designation, degre_urgence.designation
+FROM decoupage_analytique, degre_urgence
+WHERE decoupage_analytique.degre_id = degre_urgence.id]]>
+        </queryString>
+        <field name="designation" class="java.lang.String">
+
+        </field>
+        <field name="COLUMN_2" class="java.lang.String">
+
+        </field>
+    </subDataset>
+    <subDataset name="Dataset3" uuid="5309943d-4ad8-4ff2-ab1c-b0b34b3f02bf">
+
+        <queryString language="SQL">
+            <![CDATA[SELECT decoupage_analytique.designation, secteur_activite.designation
+FROM decoupage_analytique, secteur_activite
+WHERE decoupage_analytique.secteur_id = secteur_activite.id]]>
+        </queryString>
+        <field name="designation" class="java.lang.String">
+
+        </field>
+        <field name="COLUMN_2" class="java.lang.String">
+        </field>
+    </subDataset>
+    <subDataset name="Dataset4" uuid="e1dd7e23-02a6-4d6d-8a87-a2e8ced08f78">
+        <queryString language="SQL">
+            <![CDATA[SELECT decoupage_analytique.designation, pole_developement.designation
+FROM decoupage_analytique, pole_developement
+WHERE decoupage_analytique.pole_id = pole_developement.id]]>
+        </queryString>
+        <field name="designation" class="java.lang.String">
+        </field>
+        <field name="COLUMN_2" class="java.lang.String">
+        </field>
+    </subDataset>
+    <queryString language="SQL">
+        <![CDATA[select *
+from decoupage_analytique;
+
+]]>
+    </queryString>
+    <field name="id" class="java.lang.Integer">
+    </field>
+    <field name="code" class="java.lang.Integer">
+    </field>
+    <field name="designation" class="java.lang.String">
+    </field>
+    <field name="niveau" class="java.lang.Integer">
+    </field>
+    <field name="date_deb" class="java.sql.Date">
+    </field>
+    <field name="date_fin" class="java.sql.Date">
+    </field>
+    <field name="budget" class="java.lang.Double">
+    </field>
+    <field name="observation" class="java.lang.String">
+    </field>
+    <field name="coordinateur" class="java.lang.String">
+    </field>
+    <field name="resultat_attendu" class="java.lang.String">
+    </field>
+    <field name="objectif_global_dev" class="java.lang.String">
+    </field>
+    <field name="objectif_global_durable" class="java.lang.String">
+    </field>
+    <field name="contexte" class="java.lang.String">
+    </field>
+    <field name="degre_id" class="java.lang.Integer">
+    </field>
+    <field name="secteur_id" class="java.lang.Integer">
+    </field>
+    <field name="pole_id" class="java.lang.Integer">
+    </field>
+    <field name="facilitation" class="java.lang.String">
+    </field>
+    <field name="localisation" class="java.lang.String">
+    </field>
+    <variable name="id1" class="java.lang.Integer" calculation="Count">
+    </variable>
+    <variable name="id2" class="java.lang.Integer" calculation="Sum">
+    </variable>
+    <variable name="id3" class="java.lang.Integer" calculation="DistinctCount">
+    </variable>
+    <variable name="budget1" class="java.lang.Double" calculation="Sum">
+    </variable>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="164" splitType="Stretch">
+            <staticText>
+                <reportElement x="280" y="0" width="320" height="30" uuid="61ed5ab4-8e9c-483b-8c26-29c18e6f19ac"/>
+                <textElement>
+                    <font fontName="Serif" size="19" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Rapport des découpages analytiques]]></text>
+            </staticText>
+            <image>
+                <reportElement x="0" y="0" width="50" height="50" uuid="fc53041b-6ba5-4d70-beef-372bbaac1222"/>
+                <imageExpression><![CDATA["D:/cours/st2i.png"]]></imageExpression>
+            </image>
+            <textField pattern="MMMMM dd, yyyy">
+                <reportElement x="680" y="40" width="100" height="30" uuid="b3aa1247-14bb-4408-92a0-d6d872f2c203"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="620" y="40" width="58" height="30" uuid="8e2a8029-aeb0-4f44-826f-1b777cb763cd"/>
+                <text><![CDATA[Généré le :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="100" width="267" height="30" forecolor="#31248A" uuid="3e8eed8d-145d-4f13-b51a-b8bda1a27401"/>
+                <textElement>
+                    <font fontName="Sitka Subheading" size="16"/>
+                </textElement>
+                <text><![CDATA[Projets triés par budget :]]></text>
+            </staticText>
+        </band>
+    </title>
+    <summary>
+        <band height="924" splitType="Stretch">
+            <lineChart>
+                <chart isShowLegend="true" evaluationTime="Report">
+                    <reportElement x="0" y="-34" width="778" height="220" uuid="48ec2b75-4956-416e-8240-6d45e2ea3875"/>
+                    <chartTitle position="Bottom"/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <categoryDataset>
+                    <dataset resetType="Report"/>
+                    <categorySeries>
+                        <seriesExpression><![CDATA[$F{niveau}]]></seriesExpression>
+                        <categoryExpression><![CDATA[$F{designation}]]></categoryExpression>
+                        <valueExpression><![CDATA[$F{niveau}]]></valueExpression>
+                        <labelExpression><![CDATA[$F{designation}]]></labelExpression>
+                    </categorySeries>
+                </categoryDataset>
+                <linePlot>
+                    <plot/>
+                    <categoryAxisFormat>
+                        <axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+                    </categoryAxisFormat>
+                    <valueAxisFormat>
+                        <axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+                    </valueAxisFormat>
+                </linePlot>
+            </lineChart>
+            <ganttChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="10" y="230" width="768" height="240" uuid="af46d1a1-fa26-49d9-8c38-68a9ccc43504"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <ganttDataset>
+                    <dataset resetType="Report"/>
+
+                </ganttDataset>
+                <barPlot>
+                    <plot/>
+                    <itemLabel/>
+                    <categoryAxisFormat>
+                        <axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+                    </categoryAxisFormat>
+                    <valueAxisFormat>
+                        <axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+                    </valueAxisFormat>
+                </barPlot>
+            </ganttChart>
+            <staticText>
+                <reportElement x="10" y="190" width="267" height="30" forecolor="#31248A" uuid="7a169605-adf4-451a-b6ba-504fe0e354d0"/>
+                <textElement>
+                    <font fontName="Sitka Subheading" size="16"/>
+                </textElement>
+                <text><![CDATA[Diagramme de Gantt des projets :]]></text>
+            </staticText>
+            <pieChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="40" y="540" width="220" height="200" uuid="3deab515-b201-4dc0-915e-28befba47628"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report">
+                        <datasetRun subDataset="Dataset1" uuid="d101e70d-dcba-4308-826d-7f7ca74261e0"/>
+                    </dataset>
+                    <keyExpression><![CDATA[$F{niveau}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{c}]]></valueExpression>
+                </pieDataset>
+                <piePlot>
+                    <plot/>
+                    <itemLabel/>
+                </piePlot>
+            </pieChart>
+            <componentElement>
+                <reportElement x="430" y="540" width="290" height="160" uuid="21170298-cad9-4f8b-9bdb-cf00f4696699">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="Dataset2" uuid="70eebe1b-d0eb-4653-af89-f719764ef52b">
+                        <connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+                    </datasetRun>
+                    <jr:column width="130" uuid="3d4c9251-f222-4945-86a4-fcaa256a590b">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne1"/>
+                        <jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="130" height="30" uuid="580cc7f9-f6c3-49c4-af85-15f4fb716cd0"/>
+                                <textElement>
+                                    <font isBold="true"/>
+                                </textElement>
+                                <text><![CDATA[Nom du projet]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="130" height="30" uuid="26e29271-5aa2-4a21-b8c1-d1dd03dede35"/>
+                                <textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="160" uuid="7a6ed5dc-309d-4ef7-91d5-c5c882eb5f31">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne2"/>
+                        <jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="160" height="30" uuid="08a35272-7542-4517-9b51-629ed39be31f"/>
+                                <textElement>
+                                    <font isBold="true"/>
+                                </textElement>
+                                <text><![CDATA[Degré d'urgence]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="160" height="30" uuid="857ad1dc-7e86-405d-9c34-fb3c343f22d7"/>
+                                <textFieldExpression><![CDATA[$F{COLUMN_2}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+            <componentElement>
+                <reportElement x="20" y="840" width="247" height="80" uuid="2b7ab584-351e-47c2-8ac5-26ab5f31823f">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="Dataset3" uuid="336ed174-fb15-4099-82a7-546f1504be69">
+                        <connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+                    </datasetRun>
+                    <jr:column width="130" uuid="db5c7f1b-c67c-461b-997a-393545fd9cdf">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne1"/>
+                        <jr:columnHeader style="Table 1_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="130" height="30" uuid="7be5570e-3e4f-4f06-bfd6-5ecf7287d5b4"/>
+                                <text><![CDATA[Nom du projet]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table 1_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="130" height="30" uuid="e3216ada-0ff8-4a36-9e20-cb1adb8dc2bf"/>
+                                <textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="117" uuid="93cf6de8-8efc-4435-860b-f4d8740698c8">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne2"/>
+                        <jr:columnHeader style="Table 1_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="117" height="30" uuid="3052259d-b7b5-4e9e-a405-9575db2a8a1d"/>
+                                <text><![CDATA[Secteur d'activité]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table 1_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="117" height="30" uuid="95366084-289f-4e44-9284-22f986c9a183"/>
+                                <textFieldExpression><![CDATA[$F{COLUMN_2}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+            <componentElement>
+                <reportElement x="440" y="840" width="280" height="80" uuid="bac87440-58d7-486a-9dc7-f2639c6a5813">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table 2_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table 2_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table 2_TD"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="Dataset4" uuid="705ec84a-41ac-40f4-b400-248c4c02cb68">
+                        <connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+                    </datasetRun>
+                    <jr:column width="140" uuid="b78cfe49-ea1f-4646-8d80-cad03c2da452">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne1"/>
+                        <jr:columnHeader style="Table 2_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="140" height="30" uuid="afca3383-7a85-48e4-b44c-249d0af58cbf"/>
+                                <text><![CDATA[Nom du projet]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table 2_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="140" height="30" uuid="e98bf637-5934-4d87-b0db-8a2afa5c6e94"/>
+                                <textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="140" uuid="323079a8-3557-4b9b-ba3f-eac39640f0d3">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne2"/>
+                        <jr:columnHeader style="Table 2_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="140" height="30" uuid="335e53ae-3cc3-4711-990a-84014a0a4740"/>
+                                <text><![CDATA[Pole de dévelopement]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table 2_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="140" height="30" uuid="4bf573bf-c34f-4afb-943f-5d967e7f9d2c"/>
+                                <textFieldExpression><![CDATA[$F{COLUMN_2}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+            <staticText>
+                <reportElement x="0" y="490" width="320" height="40" forecolor="#31248A" uuid="9b4e3ca8-14f0-4dd7-b730-9b3008e37322"/>
+                <textElement>
+                    <font fontName="Sitka Subheading" size="16"/>
+                </textElement>
+                <text><![CDATA[Répartition des niveaux entre les projets :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="410" y="490" width="320" height="40" forecolor="#31248A" uuid="99f940ae-ecd5-4c76-b7ae-4e8c4f3c7a23"/>
+                <textElement>
+                    <font fontName="Sitka Subheading" size="16"/>
+                </textElement>
+                <text><![CDATA[Degré d'urgence par projet :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="790" width="320" height="40" forecolor="#31248A" uuid="1f07bfbb-3df0-4c4e-bd72-02c079f02f46"/>
+                <textElement>
+                    <font fontName="Sitka Subheading" size="16"/>
+                </textElement>
+                <text><![CDATA[Secteur d'activité par projet :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="420" y="790" width="320" height="40" forecolor="#31248A" uuid="3f6f70bc-157e-42f2-95da-c24428992553"/>
+                <textElement>
+                    <font fontName="Sitka Subheading" size="16"/>
+                </textElement>
+                <text><![CDATA[Pole de développement par projet :]]></text>
+            </staticText>
+        </band>
+    </summary>
+</jasperReport>
